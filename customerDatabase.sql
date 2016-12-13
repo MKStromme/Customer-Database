@@ -1,5 +1,7 @@
 CREATE DATABASE IF NOT EXISTS store;
 
+USE store;
+
 CREATE TABLE IF NOT EXISTS customer(C_ID int NOT NULL AUTO_INCREMENT,
 	LName nvarchar(255), 
 	FName nvarchar(255) NOT NUll, 
@@ -26,11 +28,11 @@ CREATE TABLE IF NOT EXISTS itemAmount(O_ID int NOT NULL,
 	
 
 	
-INSERT INTO customer(LName, FName) VALUES("kjørholt","sondre");
-INSERT INTO customer(LName, FName) VALUES("kjørholt","marius");
-INSERT INTO customer(LName, FName) VALUES("kjørholt","hanne");
-INSERT INTO customer(LName, FName) VALUES("strømme","ola");
-INSERT INTO customer(LName, FName) VALUES("strømme","marit");
+INSERT INTO customer(LName, FName) VALUES("kjÃ¸rholt","sondre");
+INSERT INTO customer(LName, FName) VALUES("kjÃ¸rholt","marius");
+INSERT INTO customer(LName, FName) VALUES("kjÃ¸rholt","hanne");
+INSERT INTO customer(LName, FName) VALUES("strÃ¸mme","ola");
+INSERT INTO customer(LName, FName) VALUES("strÃ¸mme","marit");
 
 INSERT INTO item(name, description, price) VALUES("screwdriver","It screws, screws","5.00");
 INSERT INTO item(name, description, price) VALUES("hammer","It looks like a nail","1.30");
