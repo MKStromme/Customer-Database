@@ -9,8 +9,8 @@ CREATE TABLE IF NOT EXISTS customer(C_ID int NOT NULL AUTO_INCREMENT,
 	
 CREATE TABLE IF NOT EXISTS item(I_ID int NOT NULL AUTO_INCREMENT,
 	name nvarchar(255),
-	description nvarchar(MAX),
-	price decimal(n,2),
+	description nvarchar(65535),
+	price decimal(65,2),
 	PRIMARY KEY(I_ID));
 	
 CREATE TABLE IF NOT EXISTS customerOrder(O_ID int NOT NULL AUTO_INCREMENT,
