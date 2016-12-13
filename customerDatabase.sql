@@ -40,6 +40,6 @@ INSERT INTO item(name, description, price) VALUES("hammer","It looks like a nail
 INSERT INTO customerOrder(C_ID,buyDate) VALUES((SELECT C_ID FROM customer WHERE FName = "marius"),NOW());
 
 INSERT INTO itemAmount(O_ID, I_ID, amount) VALUES(
-	(SELECT LAST(O_ID) FROM customerOrder),
+	(SELECT O_ID FROM customerOrder ORDER BY buyDate DESC LIMIT 1),
 	(SELECT I_ID FROM item WHERE name = "hammer"),
 	"3");
